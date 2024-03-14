@@ -1,0 +1,163 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body {
+    font-size: 1em;
+    background-image: url(../media/site_background.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    padding: 2%;
+}
+footer, header {
+    background-color: #F7C24F;
+    opacity: 98%;
+}
+article {
+   /* use the settings shown below */
+    display: flex;
+    flex-direction:column;
+    height: 500px;
+    flex-wrap:wrap;
+    max-width: 68%;
+    min-width: 33%;
+    background-color: #c4a66699;
+    justify-content: space-between;
+}
+section {
+    padding: 2rem;
+}
+h1 {
+    font-family: "Exo 2", sans-serif;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: .8rem;
+}
+h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2rem;
+    background-color: oldlace;
+    color: black;
+    padding: .4rem;
+    width: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+a {
+    font-family: "Mulish", sans-serif
+}
+footer {
+    padding: .4rem;
+    font-family: "Mulish", sans-serif;
+}
+nav {
+    margin:0px;
+    width:100%;
+    height:auto;
+}
+nav ul {
+    background-color: #5e5b53d9;
+    /* box-shadow settings can be whatever you want */
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.69);
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+    position: relative;
+    color: oldlace;
+    /* font-weight can be whatever you want */
+    font-weight: 900;
+}
+nav ul li {
+    display:inline-table;
+    margin:10px;
+    padding:5px;
+    color: white;
+}
+nav ul li:hover {
+    color: white;
+    /*  font-size should be a relative measurement */
+    font-size: 1rem;
+}
+nav ul li a {
+    display: block;
+    /* the padding can be in pixels */
+    padding: .2rem;
+    color: #f6d07d;
+    text-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+nav ul li:hover a {
+    color: #f6d07d;
+    text-decoration: none;
+}
+nav ul li:hover > ul {
+    display:flex;
+    flex-direction:column;
+}
+nav ul ul {
+    display: none;
+    background-color: oldlace;
+    /* the border color can be whatever you want */
+    border-radius: 5px;
+    padding: 0px;
+    position: absolute;
+   /*  font-size should be a relative measurement */
+    font-size: .8rem;
+    z-index:10;
+}
+
+nav ul ul li {
+    display:block;
+    /*  you can adjust the border top and bottom colors to whatever you want */
+    position: relative;
+    text-align: center;
+}
+nav ul ul li a {
+    font-size: .8rem;
+    padding: .5rem;
+}    
+nav ul ul li a:hover {
+    color: orchid;
+    font-size: .8rem;
+}

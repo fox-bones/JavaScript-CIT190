@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item>
+        <name>Peanut Butter French Toast</name>
+        <price>11.99</price>
+        <description>French toast fried in olive oil, topped with house-made peanut butter and local honey, served with choice of whipped creme or jam</description>
+    </item>
+    <item>
+        <name>Balsamic Vinegar and Chicken Panini</name>
+        <price>13.99</price>
+        <description>Whole grain panini grilled in olive oil with fresh chicken thighs, spinach, balsamic vingarette dressing, red onions, and mustard</description>
+    </item>
+    <item>
+        <name>Orange Omelette</name>
+        <price>12.99</price>
+        <description>Free range eggs whisked with turmeric and cracked black pepper, served with kayle, mushrooms, red onions, peppers, and choice of salsa</description>
+    </item>
+    <item>
+        <name>Ginger Oats</name>
+        <price>9.99</price>
+        <description>Whole oats served with ginger, peanut butter, nuts and seeds, and blueberries, topped with local honey</description>
+    </item>
+</menu>

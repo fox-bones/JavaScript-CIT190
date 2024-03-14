@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Form</title>
+    <style>
+        body {
+            background-image: url(media/classroom.jpg);
+            background-size: cover;
+        }
+        #form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(95, 158, 160);
+            max-width: 50%;
+            margin: 3rem;
+        }
+        fieldset {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div id="form-container">
+        <h1>Coucilor Meeting Form</h1>
+        <form method="get" action="sessionConfirm.html">
+            <fieldset>
+                <p>
+                    <label for="studentId">Student ID:</label>
+                    <input type="number" id="studentId" name="studentId" required autofocus>
+                </p>
+                <p>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" required>
+                </p>
+                <p>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname" required>
+                </p>
+                <p>
+                    <label for="grade">Your grade level:</label>
+                    <select id="grade" name="grade" required>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </p>
+            </fieldset>
+            <p>
+                <button id="submit" type="submit">Submit</button>
+                <input type="reset"></input>
+            </p>
+        </form>
+    </div>
+    
+    <script src="js/sessionForm.js"></script>
+</body>
+</html>

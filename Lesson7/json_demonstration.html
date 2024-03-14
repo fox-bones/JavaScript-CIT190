@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Display</title>
+    <style>
+        body {
+            background-image: url(media/brunch.jpg);
+            background-size: cover;
+        }
+        #content {
+            background-color: rgba(248, 248, 255, 0.708);
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+    </div>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+            if(xhr.status === 200) {
+                responseObject = JSON.parse(xhr.responseText);
+                var newContent = "";
+                for (var i = 0; i < responseObject.brunch.length; i++) {
+                    newContent += "<p>Item: " + responseObject.brunch[i].name + "<br>";
+                    newContent += "<p>Price: " + responseObject.brunch[i].price + "<br>";
+                    newContent += "Description: " + responseObject.brunch[i].description + "</p>";
+                    newContent += "<hr>";
+                }
+                document.getElementById("content").innerHTML = newContent;
+            }
+        }
+        xhr.open('GET', 'js/menu_items.json', true);
+        xhr.send(null);
+    </script>
+</body>
+</html>

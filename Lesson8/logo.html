@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Logo</title>
+</head>
+<body>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "CadetBlue";
+        ctx.fillRect(0, 0, 300, 300);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(150, 0);
+        ctx.lineTo(280, 225);    
+        ctx.lineTo(20, 225);
+        ctx.fillStyle = "green";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(150, 150, 149, 0, Math.PI * 2, true);
+        ctx.lineWidth = 2;
+        ctx.fillStyle = "red";
+        ctx.stroke();
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(90, 105, 120, 120);
+
+        ctx.beginPath();
+        ctx.arc(150, 165, 59, 0, Math.PI * 2, true);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "white";
+        ctx.stroke();
+
+        ctx.font = "30px 'sans-serif'";
+        ctx.strokeStyle = "white";
+        ctx.strokeText("Perfection", 88, 260);
+    </script>
+</body>
+</html>

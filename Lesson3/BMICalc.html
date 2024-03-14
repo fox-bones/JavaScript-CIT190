@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Righteous&display=swap" rel="stylesheet">
+    <title>BMI Calculator</title>
+</head>
+<style>
+    html {
+        height: 100%;
+    }
+    body {
+        background-image: url(media/jump_rope.png);
+        background-size: cover;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightsteelblue;
+        width: 35rem;
+        margin: 3%;
+        padding: 1%;
+        box-shadow: 3px 3px 3px black;
+    }
+    #buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .formEntry {
+        width: 50px;
+    }
+    form {
+        text-align: right;
+    }
+    hr {
+        width: 75%;
+    }
+    h1 {
+        font-family: "Righteous", sans-serif;
+        font-size: 2rem;
+    }
+    p {
+        font-family: "Convergence", sans-serif;
+    }
+    h3 {
+        font-family: "Convergence", sans-serif;
+    }
+</style>
+<body>
+    <script>
+        function calcBMI() {
+            var message = "";
+            var weight = parseInt(document.getElementById("weight").value);
+            var height = parseInt(document.getElementById("height").value);
+            var bmi = Math.round((weight * 703) / (height * height) * 10) / 10;
+            if (weight <= 600 && weight >=35 ) {
+                message = "Your BMI: " + bmi;
+                document.getElementById("message").innerHTML = message;
+            }
+            else {
+                message = "Weight must be 35 - 600lbs. Height must be 26 - 90 inches.";
+                document.getElementById("message").innerHTML = message;
+            }
+        }
+        function clearAll() {
+            document.getElementById("message").innerHTML = "";
+            document.getElementById("weight").focus();
+        }
+    </script>
+    <article>
+        <header><h1>Body Mass Index</h1></header>
+        <br>
+        <section>
+            <form>
+                <p><label id="label" for="weight">Weight (lbs): </label><input class="formEntry" id="weight" name="weight" type="number" min="35" max="600"></p>
+                <p><label id="label" for="height">Height (inches): </label><input class="formEntry" id="height" name="height" type="number" min ="36" max="90"></p>
+            <div id="buttons">
+                <input class="inputButton" type="button" value="Calculate" onclick="calcBMI()">
+                <input class="inputButton" type="reset" value="Reset" onclick="clearAll()">
+            </div>
+            </form>
+            <br>
+        </section>
+        <hr/>
+        <h3 id="message"></h3>
+        <h3>(Normal: 18.5 to 25)</h3>
+    </article>
+    <script>
+        document.getElementById("weight").focus();
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unicycle</title>
+<script>
+var rotateObj;
+var cycleImages = new Array(15);
+var curCycle = 0;
+// filling pin image array
+for (let i = 0; i <= 15; i++) {
+    cycleImages[i] = "unicycle/unicycle" + i + ".gif";
+}
+function forward() {
+    if (curCycle == 15) {
+        curCycle = 0;
+    }
+    else {
+        ++curCycle;
+    }
+    document.images[0].src = cycleImages[curCycle];
+}
+function startTurning(direction) {
+    if (rotateObj != null) {
+        clearInterval(rotateObj);
+    }
+    if (direction == "f") {
+        rotateObj = setInterval("forward()", 150);
+    }
+    else {
+        rotateObj = setInterval("reverse()", 150);
+    }
+}
+function reverse() {
+    if (curCycle == 0) {
+        curCycle = 15;
+    }
+    else {
+        --curCycle;
+    }
+    document.images[0].src = cycleImages[curCycle]
+}
+</script>
+</head>
+<body>
+<p><img src="unicycle/unicycle1.gif" alt="Image of a unicycle." height="75" width="75" /></p>
+<form>
+<p>
+<input type="button" value=" Forward " onclick="startTurning('f');" />
+<input type="button" value=" Stop " onclick="clearInterval(rotateObj);" />
+<input type="button" value="Reverse" onclick="startTurning('r');" />
+</p>
+</form>
+</body>
+</html>

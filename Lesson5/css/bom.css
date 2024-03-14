@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    background-image: url(../media/tea_field.jpeg);
+}
+#info {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem;
+    width: 88%;
+    background-color: rgba(248, 248, 255, 0.353);
+}
+#info div {
+    margin: 1rem;
+}
+#methods {
+    margin: 2rem;
+    background-color: rgba(248, 248, 255, 0.353);
+}
+#methods div {
+    margin: 1rem;
+}

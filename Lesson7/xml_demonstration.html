@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>XML Display</title>
+    <style>
+        body {
+            background-image: url(media/diner_background.jpg);
+            background-size: cover;
+        }
+        table {
+            background-color: rgba(248, 248, 255, 0.548);
+        }
+        td {
+            border-bottom: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+    <div id="menuItems"></div>
+    <button id="getMenu">Get Menu</button>
+    <script>    
+    var myCollection = document.getElementById("getMenu");
+    myCollection.addEventListener("click", function() {
+        var xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange=function() {
+            if (xhttp.readyState==4 && xhttp.status==200)
+                {
+                    xmlDoc=xhttp.responseXML;
+                    var txt="<table style='border:0'><tr><th>Name</th><th>Price</th><th>Description</th>";
+                    var a=xmlDoc.getElementsByTagName("name");
+                    var t=xmlDoc.getElementsByTagName("price");
+                    var p=xmlDoc.getElementsByTagName("description");
+                    for (var i=0;i<a.length;i++)
+                    {
+                        txt=txt + "<tr><td>";
+                        txt=txt + a[i].childNodes[0].nodeValue + "</td><td>";
+                        txt=txt + t[i].childNodes[0].nodeValue + "</td><td class='alignRight'>";
+                        txt=txt + p[i].childNodes[0].nodeValue + "</td></tr>";
+                    }
+                    txt = txt + "</table>";    
+                    document.getElementById("menuItems").innerHTML=txt;
+                    document.getElementById("getMenu").style.visibility='hidden';
+                }
+            }
+            xhttp.open("GET","js/menu_items.xml",true);
+            xhttp.send();
+        });
+    </script>
+</body>
+</html>

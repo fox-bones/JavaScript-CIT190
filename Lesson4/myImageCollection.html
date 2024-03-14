@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <style>
+        h2 {
+            color: brown;
+            font-family: "Tangerine", sans-serif;
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+            padding-left: 1rem;
+        }
+    </style>
+</head>
+<body onload="processName()">
+    <a href="media/alchemical_circle.jpg">
+        <img src="media/alchemical_circle.jpg" style="height: 300px" alt="Alchemical Circle">
+    </a>
+    <a href="media/alchemical_meister.png">
+        <img src="media/alchemical_meister.png" style="height: 300px" alt="Alchemical Meister at Work">
+    </a>
+    <a href="media/the_bottle.webp">
+        <img src="media/the_bottle.webp" style="height: 300px" alt="Bottled Mermaids">
+    </a>
+    <a href="media/the_sun_rises_from_below.jpg">
+        <img src="media/the_sun_rises_from_below.jpg" style="height: 300px" alt="Rising Sun">
+    </a>
+    <h2>Image Name: </h2>
+    <p id="name">
+        <script>
+            function processName() {
+		        var contents = "";
+		        // concatenate each alternate name
+		        for (var i = 0; i < document.images.length; i++ ) {
+		            contents += i + 1 + ". " +  document.images[i].alt + "&nbsp;&nbsp; ";
+		        } 
+		        document.getElementById( "name" ).innerHTML = contents;
+		        // calls function proccessSource in script below
+		        processSource();  
+	        }
+        </script>
+    </p>
+    <h2>Image Source: </h2>
+    <p id="source">
+        <script>
+            //Displays the text from the src attribute as the file name and location
+            function processSource() {
+                var contents = "";
+                // concatenate each alternate name
+                for (var i = 0; i < document.images.length; i++) {
+                    contents += i + 1 + ". " +  document.images[i].src + "&nbsp;&nbsp; ";
+                } 
+                document.getElementById( "source" ).innerHTML = contents;
+                // calls function processLinks in the script below
+                processLinks();
+            }
+        </script>
+    </p>
+    <h2>Image Text Links: </h2>
+    <nav id="links">
+        <script>
+            // Creates navigation text links to the larger images
+            function processLinks() {
+                var contents = "| ";
+                // concatenate each link to contents
+                for ( var i = 0; i < document.links.length; i++ ) {
+                   contents += "<a href=" + document.links[i].href + ">" + document.images[i].alt + "</a>  | ";
+                }
+                document.getElementById( "links" ).innerHTML = contents;
+            } // end function processlinks
+        </script>
+    </nav>
+</body>
+</html>

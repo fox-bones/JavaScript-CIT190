@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="css/toDoList.css" rel="stylesheet" media="screen">
+    <link href="css/toDoListPrint.css" rel="stylesheet" media="print">
+    <title>To Do List</title>
+</head>
+<body>
+    <div id="list-container">
+        <div id="list-header">
+            <h2>To Do List</h2>
+            <img src="media/check.png" width="30px">
+        </div>
+        <ul id="list">
+        </ul>
+        <div id="task-input">
+            <input id="input" placeholder="Add an item...">
+            <button id="button">+</button>
+        </div>
+        <p id="list-count">Items in list: 0</p>
+    </div>
+
+    <script src="js/toDoList.js"></script>
+</body>
+</html>

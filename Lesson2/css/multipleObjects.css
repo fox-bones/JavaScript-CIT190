@@ -1,0 +1,36 @@
+body {
+    background-image: url(../media/background.webp);
+    background-size: cover;
+}
+header {
+    margin-left: 1rem;
+    color: #FFFADE;
+    text-shadow: 3px 3px 4px black;
+}
+article {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+div {
+    background-color: lightcyan;
+    padding: .5rem;
+    margin: 1rem;
+    width: 50%;
+    box-shadow: 3px 3px 4px black;
+    opacity: 99%;
+}
+footer {
+    text-align: right;
+    color: white;
+    margin-right: 1rem;
+}
+h1 {
+    font-family: "Noto Serif", sans-serif;
+}
+h2 {
+    font-family: "Fira Sans Condensed", sans-serif;
+}
+h4 {
+    font-family: "Meera Inimai", sans-serif;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Form Confirm</title>
+    <style>
+        body {
+            background-image: url(media/classroom.jpg);
+            background-size: cover;
+        }
+        section {
+            background-color: cadetblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(95, 158, 160);
+            max-width: 50%;
+            margin: 3rem;
+            color: ghostwhite;
+            font-size: 2rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <section id="relay">
+
+    </section>
+    <script>
+        var id; var first; var last; var grade;
+        if (sessionStorage.id)
+            id = sessionStorage.id;
+        if (sessionStorage.fname)
+            first = sessionStorage.fname;
+        if (sessionStorage.lname)
+            last = sessionStorage.lname;
+        if (sessionStorage.grade)
+            grade = sessionStorage.grade;
+        if (id == undefined || first == undefined || last == undefined) {
+            alert("Register using your student ID and full name before accessing this page.");
+            window.location.assign("localForm.html");
+        }
+        else {
+            var display = "<p>" + first + " " + last + ", thank you for submitting a councilor meeting form. <br>" + 
+                "The office will contact you within the next school day to set a meeting time. <br>"
+            document.getElementById("relay").innerHTML = display;
+        }
+        console.log(id)
+        console.log(first)
+        console.log(last)
+        console.log(grade)
+    </script>
+</body>
+</html>

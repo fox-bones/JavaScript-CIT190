@@ -1,0 +1,6 @@
+{"brunch": [
+    {"name":"Peanut Butter French Toast", "price":"11.99", "description":"French toast fried in olive oil, topped with house-made peanut butter and local honey, served with choice of whipped creme or jam"},
+    {"name":"Balsamic Vinegar and Chicken Panini", "price":"13.99", "description":"Whole grain panini grilled in olive oil with fresh chicken thighs, spinach, balsamic vingarette dressing, red onions, and mustard"},
+    {"name":"Orange Omlette", "price":"12.99", "description":"Free range eggs whisked with turmeric and cracked black pepper, served with kayle, mushrooms, red onions, peppers, and choice of salsa"},
+    {"name":"Ginger Oats", "price":"9.99", "description":"Whole oats served with ginger, peanut butter, nuts and seeds, and blueberries, topped with local honey"}
+]}

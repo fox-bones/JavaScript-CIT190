@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Events</title>
+    <link href="css/bom.css" media="screen" rel="stylesheet">
+    <link href="css/bom-print.css" media="print" rel="stylesheet">
+</head>
+<body>
+    <div id="methods">
+        <div>
+            <h3>here's the time:</h3>
+            <p id="time"></p>
+        </div>
+        <div>
+            <h3>reload the page:</h3>
+            <button id="reload">Reload</button>
+        </div>
+        <div>
+            <h3>print the page:</h3>
+            <button id="print-btn">Print</button>
+        </div>
+    </div>
+    <div id="info">
+        <div>
+            <h3>browser dimensions:</h3>
+            <p id="v-width"></p>
+            <p id="v-height"></p>
+        </div>
+        <div>
+            <h3>current browser version:</h3>
+            <p id="browser"></p>
+        </div>
+        <div>
+            <h3>present URL:</h3>
+            <p id="host"></p>
+        </div>
+        <div>
+            <h3>history list length:</h3>
+            <p id="history"></p>
+        </div>
+        <div>
+            <h3>screen info:</h3>
+            <p id="s-height"></p>
+            <p id="s-width"></p>
+            <p id="pixelD"></p>
+        </div>
+    </div>
+    <script>
+        var getTime = setInterval(function() {timer()}, 1000);
+        function timer() {
+            var d = new Date();
+            var t = d.toLocaleTimeString();
+            document.getElementById("time").innerText = t;
+        }
+        document.getElementById("print-btn").addEventListener("click", function() {window.print()});
+        document.getElementById("reload").addEventListener("click", function() {location.reload()});
+        document.getElementById("v-width").innerText = "viewport width: " + window.innerWidth + "px";
+        document.getElementById("v-height").innerText = "viewport height: " + window.innerHeight + "px";
+        document.getElementById("browser").innerText = navigator.appVersion;
+        document.getElementById("host").innerText = window.location.href;
+        document.getElementById("history").innerText = history.length;
+        document.getElementById("s-height").innerText = "height: " + screen.height;
+        document.getElementById("s-width").innerText = "width: " + screen.width;
+        document.getElementById("pixelD").innerText = "pixel depth: " + screen.pixelDepth;
+    </script>
+</body>
+</html>

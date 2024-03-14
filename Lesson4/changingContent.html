@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Content</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=El+Messiri&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        #top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 1rem;
+        }
+        #middle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 1rem;
+        }
+        #bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 1rem;
+        }
+        button {
+            margin: .2rem;
+        }
+    </style>
+</head>
+<script>
+    var fCounter = 0 // counter to cycle font changes
+    var iCounter = 0 // counter to cycle image changes
+    function changeFont() {
+        if (fCounter == 0) {
+            document.getElementById("quote").innerHTML = '<p style="font-family: &apos;Great Vibes&apos;, sans-serif";>"It is better to be a warrior in a garden, than a gardener in a war" - Miyamoto Musashi</p>';
+            fCounter++;
+        } else if (fCounter == 1) {
+            document.getElementById("quote").innerHTML = '<p style="font-family: &apos;El Messiri&apos;, sans-serif";>"It is better to be a warrior in a garden, than a gardener in a war" - Miyamoto Musashi</p>';
+            fCounter++;
+        } else if (fCounter == 2) {
+            document.getElementById("quote").innerHTML = '<p style="font-family: &apos;Berkshire Swash&apos;, sans-serif";>"It is better to be a warrior in a garden, than a gardener in a war" - Miyamoto Musashi</p>';
+            fCounter++;
+        } else {
+            document.getElementById("quote").innerHTML = '<p>"It is better to be a warrior in a garden, than a gardener in a war" - Miyamoto Musashi</p>';
+            fCounter = 0;
+        }
+    }
+    function changeImage() {
+        if (iCounter == 0) {
+            document.getElementById("image_window").innerHTML = "<img src='media/dogg.jpg' style='height: 400px' alt='excited canine'>";
+            iCounter++;
+        } else if (iCounter == 1) {
+            document.getElementById("image_window").innerHTML = "<img src='media/dats_cat.webp' style='height: 400px' alt='yawning feline'>";
+            iCounter++;
+        } else {
+            document.getElementById("image_window").innerHTML = "<img src='media/spy_drone.jpg' style='height: 400px' alt='bird on a branch'>";
+            iCounter = 0;
+        }
+    }
+    function removeImage() {
+        document.getElementById("image_window").innerHTML = "";
+    }
+    function changeColor() {
+        var colorpicker = document.getElementById('colorpicker');
+        setInterval(() => {
+            let color = colorpicker.value;
+            document.body.style.backgroundColor = color;
+        }, 200);
+    }
+</script>
+<body>
+    <div id="top">
+        <div id="quote">
+            <p>"It is better to be a warrior in a garden, than a gardener in a war" - Miyamoto Musashi</p>
+        </div>
+        <button onclick="changeFont()">Change Font</button>
+
+    </div>
+    <div id="middle">
+        <div id="image_window">
+            <img src="media/spy_drone.jpg" style="height: 400px" alt="bird on a branch">
+        </div>
+        <button onclick="changeImage()">Change Image</button>
+        <button onclick="removeImage()">Remove</button>
+    </div>
+    <div id="bottom">
+        <div id="color">
+            <label for="colorpicker">Change background color: </label>
+            <input type="color" id="colorpicker" value="#ff0000" onclick="changeColor()">
+        </div>
+    </div>
+</body>
+</html>
