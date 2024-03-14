@@ -1,0 +1,44 @@
+GAME DESCRIPTIONS: 
+TEA PARTY: 
+    Tea party is a game of drag and drop creativity utilizing JQuery draggable elements. Simply click and drag elements on the page to move them about. 
+    This game is a placeholder for an evolved version of itself. In the future, Tea Party will be replaced with a drag and drop chess game, including a board and pieces. 
+    Tea party is a completed game as it is, and will not be receiving any further updates. 
+GRID KNIGHT: 
+    Grid Knight is a game of avoidance. Four mice will spawn randomly from the outter perimiters of the canvas.The goal of the player is to avoid collision with the mice. When the player contacts 
+    any particular mouse, the game is a loss. 
+    Currently, the game lacks collision mechanics. There are plans to implement a time keeping scoreboard, which will reward the player based on their survival time. 
+    There are also plans to increase the speed of the mice as time progresses. 
+FILE CACHE: 
+    games/main.html
+    games/css/main.css
+    games/js/main.js
+    games/readme/main.txt
+
+    games/tea-party.html
+    games/readme/tea_party_readme.txt
+
+    games/grid-knight.html
+    games/js/animation.js
+    games/readme/grid_knight_readme.txt
+
+    games/media/laser_sfx.mp3
+    games/media/leftMouse.mp3
+    games/media/matrix.png
+    games/media/mirrored_sprite.png
+    games/media/mountain_red.jpg
+    games/media/paper.jpg
+    games/media/rat.png
+    games/media/rightMouse.png
+    games/media/sprite.png
+    games/media/square.png
+    games/media/upRat.png
+
+CONTACT: 
+    Cayce Harwood - Creator
+    cayceharwood@gmail.com for questions or interests
+
+COPYRIGHT: 
+    If a .html file is reproduced, copied, redistributed, or shared, please credit the original author. 
+    If a .js file is reproduced, copied, redistributed, or shared, please credit the original author. 
+
+    All graphics and png aquired via CleanPNG. All background images aquired via Unsplash. 

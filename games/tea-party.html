@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+    <title>Tea Party</title>
+    <style>
+        body {
+            min-height: 100%;
+        }
+        html {
+            min-height: 100%;
+        }
+        .item {
+            position: absolute;
+        }
+        h2 {
+            text-align: center;
+            font-family: "Rouge Script", sans-serif;
+            font-size: 2rem;
+        }
+        #game-container {
+            height: 80vh;
+            background-image: url(media/temp_media/tabletop.jpg);
+        }
+    </style>
+    <script>
+        $(function() //creating draggable objects
+        {
+            $("#media1").draggable();
+            $("#media2").draggable();
+            $("#media3").draggable();
+            $("#media4").draggable();
+            $("#media5").draggable();
+            $("#media6").draggable();
+            $("#media7").draggable();
+            $("#media8").draggable();
+            $("#media9").draggable();
+        });
+    </script>
+</head>
+<body>
+    <p><a href="main.html">Return to main menu</a></p>
+    <h2>brew tea by dragging elements around</h2>
+    <div id="game-container">
+        <div id="image-cache"> <!-- colection of images -->
+            <img src="media/temp_media/faucet.png" width="300px" id="media3" class="item">
+            <img src="media/temp_media/sugar.png" width="150px" id="media9" class="item">
+            <img src="media/temp_media/chamomile.png" width="250px" id="media1" class="item">
+            <img src="media/temp_media/darjeeling-tea.png" width="250px" id="media2" class="item">
+            <img src="media/temp_media/green-tea.png" width="250px" id="media5" class="item">
+            <img src="media/temp_media/french-press.png" width="600px" id="media4" class="item">
+            <img src="media/temp_media/kettle.png" width="700px" id="media6" class="item">
+            <img src="media/temp_media/mug.png" width="300px" id="media7" class="item">
+            <img src="media/temp_media/spoon.png" width="400px" id="media8" class="item">
+        </div>
+    </div>
+    <div>
+        <h2>Instructions:</h2>
+        <p>Tea Party is a simple drag and drop game, requiring more in the way of the player's imagination than a reliance on rulesets. Click and hold the pieces to move them, and brew yourself a cup of tea! </p>
+        <p><a href="readme/tea_party_readme.txt">readme.txt</a></p>
+    </div>
+</body>
+</html>
