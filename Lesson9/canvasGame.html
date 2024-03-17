@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/canvasGame.css">
     <title>Canvas Game</title>
 </head>
 <body>
     <canvas id="canvas"></canvas>
+    <div id="start_screen">
+        <button id="start_button">Start Game</button>
+        <div id="player_loss">
+            <p>Good Run!</p>
+            <p id="final_score">Final score: </p>
+            <button id="retry_button">Retry</button>
+        </div>
+    </div>
+    <p id="score">S: </p>
+    <p id="high_score">HI: </p>
     <script src="js/canvasGame.js"></script>
+
 </body>
 </html>

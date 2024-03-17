@@ -1,0 +1,34 @@
+#start_screen {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.514);
+    width: 600px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+canvas {
+    position: absolute;
+}
+#score {
+    position: absolute;
+    margin: 10px;
+    color: white;
+    font-weight: 900;
+    display: none;
+}
+#high_score {
+    display: none;
+}
+#player_loss {
+    display: none;
+    text-align: center;
+    color: white;
+}
+#high_score {
+    position: absolute;
+    margin-top: 325px;
+    margin-left: 10px;
+    color: white;
+    font-weight: 900;
+}
