@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/canvasGame.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <title>Canvas Game</title>
+</head>
+<body>
+    <h4><a href="main.html">&#60; return to main</a></h4>
+    <h1>~ Fly By ~</h1>
+    <div id="game-container">
+        <canvas id="canvas"></canvas>
+        <div id="start_screen">
+            <h1>Fly By</h1>
+            <button id="start_button">Start Game</button>
+        </div>
+        <div id="player_loss">
+            <p>Good Run!</p>
+            <p id="final_score">Final score: </p>
+            <p id="high_score"> High score: </p>
+            <button id="retry_button">Retry</button>
+        </div>
+    </div>
+    <p>Use the arrow keys to move up and down. Pass through the openings to progress.</p>
+    <p>For additional information address the <a href="readme/flyby.txt">readme</a> file.</p>
+    <script src="js/canvasGame.js"></script>
+
+</body>
+</html>

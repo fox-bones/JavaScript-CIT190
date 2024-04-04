@@ -70,7 +70,7 @@ class Tube {
 }
 const player = new Player();
 tubeArray = [];
-setInterval(function() {tubeArray.push(new Tube())}, 1000); // adding new anonymous item to tube array every second
+setInterval(function() {tubeArray.push(new Tube())}, 800); // adding new anonymous item to tube array every second
 
 function animate() {
     const animation = window.requestAnimationFrame(animate);
@@ -123,10 +123,10 @@ function animate() {
     // adding movement to player
     document.addEventListener("keydown", (e) => {
         if (e.key == "ArrowUp") {
-            player.velocity.y = -5;
+            player.velocity.y = -6;
         }
         if (e.key == "ArrowDown") {
-            player.velocity.y = 5;
+            player.velocity.y = 6;
         }
     });
     document.addEventListener("keyup", (e) => {

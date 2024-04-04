@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+#gallery {
+    background-color: beige;
+    padding: 1rem;
+    width: 30%;
+}
+#gallery h1 {
+    text-align: center;
+}
+#thumbnail-tray {
+    margin: auto;
+    width: 60%;
+}
+#thumbnail-tray a {
+    margin: auto;
+}
+.thumbnail-image:hover {
+    cursor: pointer;
+}
+.thumbnail-image {
+    text-decoration: none;
+}
+.thumbnail-image img {
+    width: 75px;
+    height: 75px;
+    margin-top: 1rem;
+}
+#photo-viewer.is-loading:after {
+    content: url('../media/Shinai.jpg');
+}
+#viewed-image {
+    height: 300px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#viewed-image img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+}
+p {
+    text-align: center;
+}

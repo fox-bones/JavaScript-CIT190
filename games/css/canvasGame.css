@@ -1,0 +1,52 @@
+#start_screen {
+    background-color: rgb(129, 0, 0);
+    width: 600px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+#player_loss {
+    display: none;
+    text-align: center;
+    color: white;
+}
+#retry_button:hover {
+    cursor: pointer;
+}
+#start_button:hover {
+    cursor: pointer;
+}
+body {
+    background-color: black;
+    font-family: "Incosolata", sans-serif;
+    color: white;
+}
+#game-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+#game-container > * {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+p {
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+a:visited {
+    color: red;
+}
+a {
+    text-decoration: none;
+    color: yellow;
+}
+a:hover {
+    text-decoration: underline;
+    color: orange;
+}

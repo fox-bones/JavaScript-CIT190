@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Knight</title>
-    <link href="css/animation.css" rel="stylesheet">
+    <link href="css/grid-knight.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p><a href="main.html">&#60; return to main</a></p>
-    <canvas id="canvas"></canvas>
+    <h4><a href="main.html">&#60; return to main</a></h4>
+    <h1>~ Grid Knight ~</h1>
+    <div id="game-container">
+        <canvas id="canvas"></canvas>
+        <div id="start-screen">
+            <h1>Grid Knight</h1>
+            <button id="start-button">Start</button>
+        </div>
+        <div id="end-screen">
+            <h1>You Died.</h1>
+            <button id="reset-button">Play again</button>
+            <p id="player-score"></p>
+        </div>
+    </div>
+    <!--Storing images for use in canvas-->
     <img src="media/paper.jpg" id="background" style="display: none">
     <img src="media/sprite.png" id="sprite" style="display: none">
     <img src="media/mirrored_sprite.png" id="m-sprite" style="display: none">
@@ -16,12 +32,9 @@
     <img src="media/upRat.png" id="up-rat" style="display: none">
     <img src="media/leftMouse.png" id="left-rat" style="display: none">
     <img src="media/rightMouse.png" id="right-rat" style="display: none">
-    <div id="button-group">
-        <p id="player-x"></p>
-        <p id="player-y"></p>
-    </div>
-    <p><a href="readme/grid_knight_readme.txt">readme.txt</a></p>
-    <p>Use the arrow keys to move. Avoid the mice!</p>
+
+    <p>Use the arrow keys to move. Avoid the rats to progress your score.</p>
+    <p>For additional information address the <a href="readme/grid_knight_readme.txt">readme</a> file.</p>
     <script src="js/animation.js"></script>
 </body>
 </html>

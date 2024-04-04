@@ -44,6 +44,7 @@ html {
 body {
     height: 100vh;
     background-image: url(../media/mountain_red.jpg);
+    font-family: "Incosolata", sans-serif;
 }
 h1 {
     background-color: black;
@@ -51,12 +52,10 @@ h1 {
     margin-bottom: 3rem;
     width: 300px;
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
     font-size: 2rem;
     box-shadow: 4px 8px 4px black;
     border-radius: 5px;
-    font-family: "Wallpoet", sans-serif;
 }
 p {
     font-size: 1.3rem;

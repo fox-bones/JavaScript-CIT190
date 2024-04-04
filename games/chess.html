@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Chess</title>
+    <link href="css/chess.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+    </style>
+    <script>
+        $(function() {
+            $(".piece").draggable();
+        });
+        
+    </script>
+</head>
+<body>
+    <h4><a href="main.html">&#60; return to main</a></h4>
+    <h1>~ Chess ~</h1>
+    <div id="center">
+        <div id="game">
+            <div id="board">
+                <img src="media/chess/marble_512x520.png">
+            </div>
+            <div id="pieces">
+                <div id="white-pieces">
+                    <img src="media/chess/white_rook.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/white_rook.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/white_knight.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/white_knight.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/white_bishop.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/white_bishop.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/white_queen.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/white_queen.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/white_king.png" class="piece" style="z-index: 2">
+                    <br>
+                    <img src="media/chess/white_pawn.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/white_pawn.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/white_pawn.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/white_pawn.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/white_pawn.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/white_pawn.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/white_pawn.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/white_pawn.png" class="piece" style="z-index: 1">
+                </div>
+                <br>
+                <div id="black-pieces">
+                    <img src="media/chess/black_rook.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/black_rook.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/black_knight.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/black_knight.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/black_bishop.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/black_bishop.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/black_queen.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/black_queen.png" class="piece" style="z-index: 1">
+                    <img src="media/chess/black_king.png" class="piece" style="z-index: 1">
+                    <br>
+                    <img src="media/chess/black_pawn.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/black_pawn.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/black_pawn.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/black_pawn.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/black_pawn.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/black_pawn.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/black_pawn.png" class="piece" style="z-index: 2">
+                    <img src="media/chess/black_pawn.png" class="piece" style="z-index: 2">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="instructions">
+        <p>Welcome to chess. Drag and drop the pieces to play!</p>
+        <p>For additional information address the <a href="readme/chess.txt">readme</a> file.</p>
+    </div>
+</body>
+</html>

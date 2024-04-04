@@ -1,0 +1,48 @@
+#center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#pieces {
+    display: inline-block;
+}
+#board {
+    display: inline-block;
+}
+#game {
+    background-color: lightslategray;
+    padding: 2%;
+    border: 10px inset rgb(116, 169, 223);
+}
+#instructions p {
+    text-align: center;
+    color: white;
+}
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: "Incosolata", sans-serif;
+}
+h1 {
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+h4 {
+    color: white;
+    margin: 1rem;
+}
+.piece:hover {
+    cursor: pointer;
+}
+a:visited {
+    color: red;
+}
+a {
+    text-decoration: none;
+    color: yellow;
+}
+a:hover {
+    text-decoration: underline;
+    color: orange;
+}

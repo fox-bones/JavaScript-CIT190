@@ -1,0 +1,47 @@
+.accordion {
+    background-color: beige;
+    color: #000000;
+    cursor: pointer;
+    padding: 1rem;
+    border: none;
+    text-align: left;
+    outline: none;
+    border-bottom:1px solid rgb(65, 65, 65);
+    width:70%;
+    display:block;
+}
+
+.active, .accordion:hover {
+    background-color: burlywood;
+    color:white;
+}
+
+.panel {
+    padding: 1%;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    width: 68%;
+    text-align: left;
+    background-color: rgba(222, 184, 135, 0.582);
+    border-bottom:1px solid rgb(65, 65, 65);
+}
+
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body {
+    background-image: url(../media/Koala.webp);
+    background-size: cover;
+}
+
+h1 {
+    font-family: "Crimson Text", sans-serif;
+    font-size: 2rem;
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px black;
+}

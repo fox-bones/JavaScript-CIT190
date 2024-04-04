@@ -8,6 +8,8 @@ var rat = document.getElementById("rat");
 var upRat = document.getElementById("up-rat");
 var leftRat = document.getElementById("left-rat");
 var rightRat = document.getElementById("right-rat");
+var startButton = document.getElementById("start-button");
+var startScreen = document.getElementById("start-screen");
 canvas.width = 1280;
 canvas.height = 650;
 canvas.style.border = "solid 1px black"
@@ -17,7 +19,7 @@ class Player {
     constructor() {
         this.width = 70;
         this.height = 100;
-        this.position = {
+        this.position = { // spawning player in center of canvas
             x: (canvas.width / 2) - (this.width / 2),
             y: (canvas.height / 2) - (this.height / 2)
         }
@@ -52,6 +54,7 @@ class Player {
         }
     }
 }
+
 class Enemy {
     // similar to player, utilizing randomization to spawn
     constructor(direction, image) {
@@ -70,80 +73,92 @@ class Enemy {
         this.direction = direction, 
         this.image = image;
     }
-    // tanslates enemy direction, up, down, left, or right type into movement
+    // trnaslates enemy direction, up, down, left, or right type into movement
     update() {
         if (this.direction == "down") { // properties of downward moving enemy
-            this.velocity.y = 5;
-            c.drawImage(this.image, this.rX, this.position.y - this.height, this.width, this.height);
-            this.position.y += this.velocity.y;
-        }
-        else if (this.direction == "up") { // properties of upward moving enemy
-            this.velocity.y = -5;
+            this.velocity.y = 7;
             c.drawImage(this.image, this.rX, this.position.y, this.width, this.height);
             this.position.y += this.velocity.y;
+            this.position.x = this.rX;
+        }
+        else if (this.direction == "up") { // properties of upward moving enemy
+            this.velocity.y = -7;
+            c.drawImage(this.image, this.rX, this.position.y, this.width, this.height);
+            this.position.y += this.velocity.y;
+            this.position.x = this.rX;
         }
         else if (this.direction == "left") {  // properties of leftward moving enemy
-            this.velocity.x = -5;
+            this.velocity.x = -7;
             c.drawImage(this.image, this.position.x, this.rY, this.width, this.height);
             this.position.x += this.velocity.x;
+            this.position.y = this.rY;
             this.width = 100;
             this.height = 70;
         }
         else if (this.direction == "right") {
-            this.velocity.x = 5;
-            c.drawImage(this.image, this.position.x - this.width, this.rY, this.width, this.height);
+            this.velocity.x = 7;
+            c.drawImage(this.image, this.position.x, this.rY, this.width, this.height);
             this.position.x += this.velocity.x;
+            this.position.y = this.rY;
             this.width = 100;
             this.height = 70;
         }
     }
     // rerolls random x and y values
     randomize() {
-        this.rY = Math.floor(Math.random() * (canvas.height - this.height));
-        this.rX = Math.floor(Math.random() * (canvas.width - this.width));
+        //this.rY = Math.floor(Math.random() * (canvas.height - this.height));
+        this.rY = Math.floor(Math.random() * (canvas.height));
+        //this.rX = Math.floor(Math.random() * (canvas.width - this.width));
+        this.rX = Math.floor(Math.random() * (canvas.width));
     }
     // resets enemy to a new, random point based on direction
     reset() {
         if (this.direction == "down") {
             if (this.position.y > canvas.height + this.height) {
                 this.randomize();
-                this.position.y = 0;
+                this.position.y = 0 - this.height;
+                playerScore++;
             }
         }
         else if (this.direction == "up") {
             if (upEnemy.position.y < (0 - upEnemy.height)) {
                 this.randomize();
                 this.position.y = canvas.height;
+                playerScore++;
             }
         }
         else if (this.direction =="left") {
             if (leftEnemy.position.x < (0 - leftEnemy.width)) {
                 this.randomize();
                 this.position.x = canvas.width;
+                playerScore++;
             }
         }
         else if (this.direction == "right") {
             if (rightEnemy.position.x > canvas.width + rightEnemy.width) {
                 this.randomize();
-                this.position.x = 0;
+                this.position.x = 0 - this.width;
+                playerScore++;
             }
         }
     }
 }
 
 // defining player and enemies 
-const player = new Player();
+var player = new Player();
 const downEnemy = new Enemy("down", rat);
 const upEnemy = new Enemy("up", upRat);
 const leftEnemy = new Enemy("left", leftRat);
 const rightEnemy = new Enemy("right", rightRat);
-const enemyList = [downEnemy, upEnemy, leftEnemy, rightEnemy];
-var playerX = document.getElementById("player-x"); // player x position tracker
-var playerY = document.getElementById("player-y"); // player y position tracker
+var enemyList = [downEnemy, upEnemy, leftEnemy, rightEnemy];
+// player score increments as rats respawn -- found in Enemy.reset()
+var playerScore = 0;
 
 function game() { 
-    window.requestAnimationFrame(game);
+    var animate = window.requestAnimationFrame(game);
     c.drawImage(background, 0, 0, canvas.width, canvas.height); // redrawing canvas each frame
+    c.font = "32px serif";
+    c.strokeText("Rats survived: " + playerScore, 15, 30);
 
     // adding controls on arrow keys. Player velocity directly corresponds to player position. Movements are more fluid...
     document.addEventListener("keydown", (e) => {
@@ -186,16 +201,35 @@ function game() {
     player.update();
     player.checkCollision();
 
-    // spawning enemies from list, and checking for respawn positions
+    // spawning enemies from list, and checking for respawn position
     for (i = 0; i < enemyList.length; i++) {
         enemyList[i].update();
         enemyList[i].reset();
+        // coding collisions -- hitboxes reduced by 10 for visual accuracy 
+        if (enemyList[i].position.x + enemyList[i].width - 10 >= player.position.x + 10 &&
+            enemyList[i].position.x + 10<= player.position.x + player.width - 10 &&
+            enemyList[i].position.y + enemyList[i].height -10 >= player.position.y + 10 &&
+            enemyList[i].position.y + 10 <= player.position.y + player.height - 10) {
+                window.cancelAnimationFrame(animate);
+                document.getElementById("end-screen").style.display = "flex";
+                document.getElementById("player-score").innerText = "You survived " + playerScore + " rats.";
+        }
     }
-
-    // updating position trackers
-    playerX.innerText = "Player X: " + player.position.x;
-    playerY.innerText = "Player Y: " + player.position.y;
+    console.log("Rats survived:" + playerScore);
 }
 
 // running the game
-game();
+startButton.addEventListener("click", function() {
+    game();
+    startScreen.style.display = "none";
+});
+document.getElementById("reset-button").addEventListener("click", function() {
+    document.getElementById("end-screen").style.display = "none";
+    player = new Player();
+    playerScore = 0;
+    for (i = 0; i < enemyList.length; i++) {
+        enemyList[i].position.x = 0;
+        enemyList[i].position.y = 0;
+    }
+    game();
+});

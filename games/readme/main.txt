@@ -1,13 +1,21 @@
 GAME DESCRIPTIONS: 
-TEA PARTY: 
-    Tea party is a game of drag and drop creativity utilizing JQuery draggable elements. Simply click and drag elements on the page to move them about. 
-    This game is a placeholder for an evolved version of itself. In the future, Tea Party will be replaced with a drag and drop chess game, including a board and pieces. 
-    Tea party is a completed game as it is, and will not be receiving any further updates. 
+CHESS: 
+    Chess is a turn based game on a board of 64 squares. Players attempt to checkmate their opponent's King by removing all available squares of movement.
+    For a more thorough understanding of chess's mechanics and rulesets, please visit chess.com @ https://www.chess.com/learn-how-to-play-chess
+    To play the game, simply drag and drop the pieces to their locations. Pass the mouse to the your opponent after your turn.
+
 GRID KNIGHT: 
-    Grid Knight is a game of avoidance. Four mice will spawn randomly from the outter perimiters of the canvas.The goal of the player is to avoid collision with the mice. When the player contacts 
-    any particular mouse, the game is a loss. 
-    Currently, the game lacks collision mechanics. There are plans to implement a time keeping scoreboard, which will reward the player based on their survival time. 
-    There are also plans to increase the speed of the mice as time progresses. 
+    Grid Knight is a game of avoidance. Four rats will spawn randomly from the outter perimiters of the canvas. The goal of the player is to avoid collision with the rats. When the player contacts 
+    any particular rat, the game is a loss. 
+    Player score is determined by the number of rats avoided before being hit.
+    Use the arrow keys to move your player. 
+
+FLYBY: 
+    Flyby is a game of accuracy, requiring the player to position themselve's between the open space of two pillars as they rush down a corridor. 
+    Players move by using the up and down arrow keys. 
+    Player score is tallied each time the player passes a pillar without touching it. 
+    Can you beat your high score? 
+    
 FILE CACHE: 
     games/main.html
     games/css/main.css
@@ -32,6 +40,19 @@ FILE CACHE:
     games/media/sprite.png
     games/media/square.png
     games/media/upRat.png
+    games/media/chess/black_bishop.png
+    games/media/chess/black_king.png
+    games/media/chess/black_knight.png
+    games/media/chess/black_pawn.png
+    games/media/chess/black_queen.png
+    games/media/chess/black_rook.png
+    games/media/chess/white_bishop.png
+    games/media/chess/white_king.png
+    games/media/chess/white_knight.png
+    games/media/chess/white_pawn.png
+    games/media/chess/white_queen.png
+    games/media/chess/white_rook.png
+    games/media/chess/marble_512x520.png
 
 CONTACT: 
     Cayce Harwood - Creator
@@ -41,4 +62,4 @@ COPYRIGHT:
     If a .html file is reproduced, copied, redistributed, or shared, please credit the original author. 
     If a .js file is reproduced, copied, redistributed, or shared, please credit the original author. 
 
-    All graphics and png aquired via CleanPNG. All background images aquired via Unsplash. 
+    All chess pngs aquired by Screaming Brain Studios at opengameart.org *https://opengameart.org/content/2d-chess-pack*. All background images aquired via Unsplash. 

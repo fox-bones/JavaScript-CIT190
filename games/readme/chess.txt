@@ -1,0 +1,7 @@
+Chess is a turn based game on a board of 64 squares. Players attempt to checkmate their opponent's King by removing all available squares of movement.
+For a more thorough understanding of chess's mechanics and rulesets, please visit chess.com @ https://www.chess.com/learn-how-to-play-chess
+To play the game, simply drag and drop the pieces to their locations. Pass the mouse to the your opponent after your turn.
+
+All resources retreived by Screaming Brain Studios @ https://opengameart.org/content/2d-chess-pack
+Drag and Drop Chess - Cayce Harwood 2024
+Contact cayceharwood@gmail.com for questions or interests

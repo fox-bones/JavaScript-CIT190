@@ -1,0 +1,7 @@
+Flyby is a game of accuracy, requiring the player to position themselve's between the open space of two pillars as they rush down a corridor. 
+Players move by using the up and down arrow keys. 
+Player score is tallied each time the player passes a pillar without touching it. 
+Can you beat your high score? 
+
+Contact cayceharwood@gmail.com for questions or interests
+Flyby - Cayce Harwood 2024

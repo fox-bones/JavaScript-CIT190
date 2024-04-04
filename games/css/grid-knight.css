@@ -1,0 +1,61 @@
+#start-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(129, 0, 0);
+    width: 1280px;
+    height: 651px;
+    color: white;
+}
+#start-screen button:hover {
+    cursor: pointer;
+}
+#end-screen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.61);
+    width: 1280px;
+    height: 651px;
+    color: black;
+}
+#end-screen button:hover {
+    cursor: pointer;
+}
+body {
+    background-color: black;
+    color: white;
+    font-family: "Incosolata", sans-serif;
+}
+#game-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+#game-container > * {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+a:visited {
+    color: red;
+}
+a {
+    text-decoration: none;
+    color: yellow;
+}
+a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+h1 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+h4 {
+    color: white;
+    margin: 1rem;
+}
