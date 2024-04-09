@@ -1,0 +1,53 @@
+body {
+    background-image: url("../media/health.jpg");
+    background-size: cover;
+    text-align: center;
+}
+h1 {
+    color: white;
+    background-color: green;
+    width: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+table {
+    background-color:mediumvioletred;
+    margin-left: auto;
+    margin-right: auto;
+}
+td {
+    border: 1px solid white;
+    max-width: 300px;
+    color: rgb(0, 0, 0);
+    background-color: orange;
+    padding: .5rem;
+}
+th {
+    background-color: yellow;
+    padding: .5rem;
+}
+th:hover {
+    cursor: pointer;
+}
+#courtesy {
+    text-align: center;
+}
+th.ascending:after {
+	font-size: 60%;
+    content: '\25B2';
+    float: left;
+	padding: 4px 5px 0 0;
+}
+th.descending:after {
+	font-size: 60%;
+    content: '\25BC';
+    float: left;
+	padding: 4px 5px 0 0;
+}
+th.descending {
+    background-color: lightgray;
+}
+th.ascending {
+    background-color: lightgray;
+}
