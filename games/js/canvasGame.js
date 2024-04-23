@@ -70,7 +70,7 @@ class Tube {
 }
 const player = new Player();
 tubeArray = [];
-setInterval(function() {tubeArray.push(new Tube())}, 800); // adding new anonymous item to tube array every second
+tubeArray.push(new Tube())
 
 function animate() {
     const animation = window.requestAnimationFrame(animate);
@@ -91,6 +91,9 @@ function animate() {
         if (tube.position.x < -50) { // removing tube once it leaves the screen
             tubeArray.shift();
         }
+        if (tube.position.x == 350) { // spawning tube when the previous tube reaches x350
+            tubeArray.push(new Tube());
+        }
 
         // handling collisions
             // handling top tube collisions
@@ -107,7 +110,7 @@ function animate() {
             player.position.y + player.height >= tube.bot.y ||
             // handling canvas collisions
             player.position.y <= 0 ||
-            player.position.y + player.height >= canvas.height) { // this tehcnically shouldn't be here, yet it works (handling canvas collisions through the tube array)
+            player.position.y + player.height >= canvas.height) { // the collision handling is a bit convoluded, yet it works.
                 window.cancelAnimationFrame(animation);
                 startScreen.style.display= "none";
                 lossScreen.style.display = "block";
@@ -151,6 +154,7 @@ document.getElementById("start_button").addEventListener("click", function() {
 document.getElementById("retry_button").addEventListener("click", function() {
     score = 0;
     tubeArray = [];
+    tubeArray.push(new Tube());
     startScreen.style.backgroundColor = "rgba(0, 0, 0, 0)";
     lossScreen.style.display = "none";
     animate();
